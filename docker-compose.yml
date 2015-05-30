@@ -1,0 +1,20 @@
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: dont_use_root_user
+    MYSQL_USER: drupal
+    MYSQL_PASSWORD: password
+    MYSQL_DATABASE: drupal
+php:
+  image: php-fpm-drupal
+  command: /opt/start_php_fpm.sh
+  links:
+    - db
+nginx: 
+  image: nginx-drupal
+  links:
+    - php
+  command: /opt/start_nginx.sh
+  ports:
+    - "80:80"
+    - "443:443"

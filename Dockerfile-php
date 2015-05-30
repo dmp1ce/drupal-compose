@@ -1,0 +1,6 @@
+FROM dmp1ce/php-fpm-drupal-local
+MAINTAINER David Parrish <daveparrish@gmail.com>
+
+COPY drupal.make.yml /srv/http/drupal/drupal.make.yml
+RUN drush make -y --prepare-install /srv/http/drupal/drupal.make.yml
+COPY php/settings.php /srv/http/drupal/sites/default/settings.php
