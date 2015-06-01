@@ -10,7 +10,8 @@ php:
   command: /opt/start_php_fpm.sh
   links:
     - db
-#  volumes:
+  volumes:
+    - development_contrib_modules:/srv/http/drupal/sites/all/modules/dev
 #    - custom_libraries/custom-library-here:/srv/http/drupal/sites/all/libraries/custom-library-here
 nginx:
   image: nginx-drupal
@@ -20,5 +21,6 @@ nginx:
   ports:
     - "80:80"
     - "443:443"
-#  volumes:
+  volumes:
+    - development_contrib_modules:/srv/http/drupal/sites/all/modules/dev
 #    - custom_libraries/custom-library-here:/srv/http/drupal/sites/all/libraries/custom-library-here
