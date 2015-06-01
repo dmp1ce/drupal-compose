@@ -1,5 +1,10 @@
 core: '7.x'
 api: 2
 projects:
+  # TODO: Get the versions for all projects.
   drupal:
     version: ~
+#  views:
+#    version: ~
+#  ctools:
+#    version: ~
