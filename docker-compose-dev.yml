@@ -11,7 +11,7 @@ php:
   links:
     - db
   volumes:
-    - development_contrib_modules:/srv/http/drupal/sites/all/modules/dev
+    - custom_contrib_modules:/srv/http/drupal/sites/all/modules/custom_contrib
 #    - custom_libraries/custom-library-here:/srv/http/drupal/sites/all/libraries/custom-library-here
 nginx:
   image: nginx-drupal
@@ -22,5 +22,5 @@ nginx:
     - "80:80"
     - "443:443"
   volumes:
-    - development_contrib_modules:/srv/http/drupal/sites/all/modules/dev
+    - custom_contrib_modules:/srv/http/drupal/sites/all/modules/custom_contrib
 #    - custom_libraries/custom-library-here:/srv/http/drupal/sites/all/libraries/custom-library-here
