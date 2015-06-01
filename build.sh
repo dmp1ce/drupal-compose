@@ -1,5 +1,8 @@
 #/bin/bash
 
+# TODO: Add a 'pull' option which will download new builds.
+# TODO: Add a 'clean' option which will start build from scratch.
+
 # Build named Dockerfiles
 # Build php first to get Drupal project
 docker build -t php-fpm-drupal -f Dockerfile-php .
