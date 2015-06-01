@@ -7,6 +7,6 @@ RUN drush make -y --prepare-install /srv/http/drupal/drupal.make.yml
 RUN drush dl registry_rebuild
 COPY php/settings.php /srv/http/drupal/sites/default/settings.php
 # Copy custom modules.
-COPY custom_contrib_modules /srv/http/drupal/sites/all/modules/custom_contrib
+COPY custom_modules /srv/http/drupal/sites/all/modules/custom
 # Copy custom libraries.
 #COPY custom_libraries/custom-library-here /srv/http/drupal/sites/all/libraries/custom-library-here
