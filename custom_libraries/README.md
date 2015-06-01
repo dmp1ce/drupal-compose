@@ -1,0 +1,1 @@
+Only libraries which need modification from the originals should go here. These libraries will need to be manually added to the `Dockerfile-php` build configuration. If possible, libraries should go in the `drupal.make.yml` configuration file.
