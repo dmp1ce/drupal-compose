@@ -30,4 +30,4 @@ TLS certifications are created when the project is built unless you supply your 
 
 [This is how to add the certificate in Chrome.](http://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate)
 
-Add your own certificate and key in the `nginx/ss/` directory as `server.key` and `server.crt`.
+Add your own certificate and key in the `nginx/ssl/` directory as `server.key` and `server.crt`.
