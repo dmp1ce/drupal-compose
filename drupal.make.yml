@@ -1,7 +1,9 @@
 core: '7.x'
 api: 2
+defaults:
+  projects:
+    subdir: "contrib"
 projects:
-  # TODO: Get the versions for all projects.
   drupal:
     version: ~
 #  views:
