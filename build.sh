@@ -17,4 +17,6 @@ docker cp ${CID}:/srv/http/drupal nginx
 docker build -t nginx-drupal -f Dockerfile-nginx .
 
 # Build remaining docker-compose containers
-docker-compose build
+source .common.sh
+load_environment
+docker-compose -f $dc_config_file build

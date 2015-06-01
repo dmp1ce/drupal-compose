@@ -1,5 +1,6 @@
 #!/bin/bash
 
-# TODO: Add option for 'dev' up that will run the devlepment environment.
+source .common.sh
+load_environment
 
-docker-compose -f docker-compose-dev.yml up -d
+docker-compose -f $dc_config_file up -d
