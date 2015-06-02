@@ -11,8 +11,6 @@ docker build -t php-fpm-drupal -f Dockerfile-php .
 CID=$(docker run -d php-fpm-drupal true)
 docker cp ${CID}:/srv/http/drupal nginx
 
-# TODO: Generate SSL certificates if they don't already exist.
-
 # Build nginx 
 docker build -t nginx-drupal -f Dockerfile-nginx .
 
